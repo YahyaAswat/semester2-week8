@@ -1,6 +1,6 @@
 /**
- * @file act2_-_coords_struct_stub.c
- * @brief A program demonstrating the use of structs for coordinate manipulation
+ * task 2 - coords_struct_stub.c
+ * A program demonstrating the use of structs for coordinate manipulation
  */
 
 #include <stdio.h>
@@ -9,7 +9,7 @@
 #define GRID_SIZE 21 // 21x21 grid for -10 to +10 range
 
 /**
- * @brief Structure to represent a 2D point
+ * Structure to represent a 2D point
  */
 typedef struct _point {
     int x;
@@ -17,7 +17,7 @@ typedef struct _point {
 } Point;
 
 /**
- * @brief Structure to represent a grid
+ * Structure to represent a grid
  */
 typedef struct _grid {
     char **grid;
@@ -80,13 +80,13 @@ int main(void) {
 }
 
 /**
- * @brief Move a point by the provided delta
+ * Move a point by the provided delta
  *
  * This function creates a new point by adding the delta values to the original point.
  *
- * @param p The original point
- * @param dp The delta to add (contains x and y components)
- * @return Point A new point representing p + dp
+ * p The original point
+ * dp The delta to add (contains x and y components)
+ * return Point A new point representing p + dp
  */
 Point move_point(Point p, Point dp) {
     // TODO: Create and return a new point by adding dp to p
@@ -98,14 +98,14 @@ Point move_point(Point p, Point dp) {
 }
 
 /**
- * @brief Reflects a point across an axis
+ * Reflects a point across an axis
  *
  * This function creates a new point that is the reflection of the original point
  * across either the x-axis or the y-axis.
  *
- * @param p The point to reflect
- * @param axis The axis to reflect across ('x' or 'y')
- * @return Point A new point representing the reflection of p
+ * p The point to reflect
+ * axis The axis to reflect across ('x' or 'y')
+ * return Point A new point representing the reflection of p
  */
 Point reflect_point(Point p, char axis) {
     // TODO: Create and return a new point that is the reflection of p across the specified axis
@@ -118,12 +118,12 @@ Point reflect_point(Point p, char axis) {
 }
 
 /**
- * @brief Swaps the x and y coordinates of a point
+ * Swaps the x and y coordinates of a point
  *
  * This function creates a new point with the x and y coordinates swapped.
  *
- * @param p The original point
- * @return Point A new point with x and y coordinates swapped
+ * p The original point
+ * return Point A new point with x and y coordinates swapped
  */
 Point swap_coords(Point p) {
     // TODO: Create and return a new point with p's x and y coordinates swapped
@@ -135,9 +135,9 @@ Point swap_coords(Point p) {
 }
 
 /**
- * @brief Initialises the grid with axes
+ * Initialises the grid with axes
  *
- * @return char** 2D array representing the initialised grid
+ * return char** 2D array representing the initialised grid
  */
 char **initialize_grid(void) {
     char **grid = (char **)malloc(GRID_SIZE * sizeof(char *));
@@ -145,7 +145,7 @@ char **initialize_grid(void) {
         grid[i] = (char *)malloc(GRID_SIZE * sizeof(char));
     }
 
-    // Fill with spaces
+    // Fill with whitespace characters
     for (int i = 0; i < GRID_SIZE; i++)
         for (int j = 0; j < GRID_SIZE; j++)
             grid[i][j] = ' ';
@@ -162,9 +162,9 @@ char **initialize_grid(void) {
 }
 
 /**
- * @brief Draws the grid
+ * Draws the grid
  *
- * @param grid The 2D array representing the grid
+ * grid The 2D array representing the grid
  */
 void draw_grid(char **grid) {
     for (int i = 0; i < GRID_SIZE; i++) {
@@ -176,10 +176,10 @@ void draw_grid(char **grid) {
 }
 
 /**
- * @brief Adds a point to the grid
+ * Adds a point to the grid
  *
- * @param grid The 2D array representing the grid
- * @param p The point to add
+ * grid The 2D array representing the grid
+ * p The point to add
  */
 void add_point(char **grid, Point p) {
     // Adjust coordinates for grid's origin (10, 10)

@@ -23,7 +23,13 @@ You'll implement three functions that perform transformations on points:
 2. `reflect_point`: Reflect a point across the x or y axis
 3. `swap_coords`: Swap the x and y coordinates of a point
 
-The program visualises these transformations on a 2D grid displayed in the console.
+The program visualises these transformations on a 2D ASCII grid displayed in the console.
+
+Note: 
+- in common with all computer graphics the "screen origin" is top left, rather than the bottom left we expect from maths.
+    - x increases from left to right
+    - y increases from top to bottom
+- we do a bit of rescaling in our code to account for this (see the `add_point()` function)
 
 ## The Point Struct
 

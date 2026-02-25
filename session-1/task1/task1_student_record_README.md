@@ -1,6 +1,8 @@
 # Task 1: Student Record Management
 
-This activity introduces the use of structures (`struct`) in C to manage related data as a single unit. You'll create a student record system that stores and manipulates student information.
+This activity introduces the use of structures (`struct`) in C to manage related data as a single unit. 
+
+You'll create a student record system that stores and manipulates student information.
 
 ## Learning Objectives
 
