@@ -4,26 +4,31 @@
 
 int main( void ) {
 
-    // complete the structure definition in the header file first
-    // code in main to test the structures and functions
-    
+    Point p = {1,0};
+    Rectangle r = makeRectangle(p, 1, 1);
+    printf("%f\n", area(r));
+    Point p2 = {2,2};
+    shiftRectangle(&r, p2);
+    printf("X: %f\nY: %f\n", r.p.x, r.p.y);
     return 0;
 }
 
 Rectangle makeRectangle( Point p, float width, float height ){
-    Rectangle r;
+    Rectangle r = {.p=p, .width=width, .height=height};
 
     return r;
 }
 
 float area( Rectangle r ) {
-    float a = 0.0;
+    float a = r.width * r.height;
 
     return a;
 }
 
 void shiftRectangle( Rectangle *r, Point dp ) {
 
+    r->p.x = r->p.x + dp.x;
+    r->p.y = r->p.y + dp.y;
     return;
 }
 

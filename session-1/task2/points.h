@@ -2,7 +2,8 @@
 // define the structure here 
 
 typedef struct _point {
-    // your code
+    double x;
+    double y;
 } Point;
 
 // state function headers here
